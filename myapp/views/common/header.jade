@@ -1,0 +1,61 @@
+div(class="header")
+	div(class="container")
+		div(class="header-top")
+			div(class="logo")
+				a(href="http://localhost:7000") 
+					h6 Online Furnish
+					h2 Luxury
+			div(class="header_right")
+				ul(class="social")
+					li
+						a(href="")
+							i( class="fb")
+					li
+						a(href="")
+							i(class="tw")
+					li
+						a(href="")
+							i(class="utube")
+					li
+						a(href="")
+							i(class="pin")
+					li
+						a(href="")
+							i(class="instagram")
+				</ul>
+				div(class="lang_list")
+					select(tabindex="4" class="dropdown")
+						option(value="" class="label") En
+						option(value="1") English
+						option(value="2") French
+						option(value="3") German
+				div(class="clearfix")
+			div(class="clearfix")
+		div(class="about_box")
+			ul(class="login")
+				li(class="login_text")
+					a(href="login.html") Login
+				li(class="wish")
+					a(href="checkout.html") Wish List
+				div(class='clearfix')
+			div(class="cart_bg")
+				ul(class="cart")
+					a(href="checkout.html")
+						h4
+							i(class="cart_icon")
+							p Cart: 
+								span(class="simpleCart_total") (
+								span(id="simpleCart_quantity" class="simpleCart_quantity") items)
+							div(class="clearfix")
+					h5(class="empty")
+						a(href="#" class="simpleCart_empty") Empty Cart
+					div(class="clearfix")
+			ul(class="quick_access")
+				li(class="view_cart")
+					a(href="checkout.html") View Cart
+				li(class="check")
+					a(href="checkout.html") Checkout
+				div(class='clearfix')
+			div(class="search")
+				input(type="text" value="Search")
+				input(type="submit" value="")

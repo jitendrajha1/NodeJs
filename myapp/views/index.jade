@@ -1,0 +1,296 @@
+extends layout
+block content
+	div(class="header")
+		div(class="container")
+			div(class="header-top")
+				div(class="logo")
+					a(href="index.html")
+						h6 Online Furnish
+						h2 Luxury
+				div(class="header_right")
+					ul(class="social")
+						li
+							a(href="")
+								i(class="fb")
+						li
+							a(href="")
+								i(class="tw")
+						li
+							a(href="")
+								i(class="utube")
+						li
+							a(href="")
+								i(class="pin")
+						li
+							a(href="")
+								i(class="instagram")
+					div(class="lang_list")
+						select(tabindex="4" class="dropdown")
+							option(value="1") English
+							option(value="2") French
+							option(value="3") German
+					div(class="clearfix")
+				div(class="clearfix")
+			div(class="banner_wrap")
+				div(class="bannertop_box")
+					ul(class="login")
+						li(class="login_text")
+							a(href="login.html") Login
+						li(class="wish")
+							a(href="checkout.html") Wish List
+						div(class='clearfix')
+					div(class="cart_bg")
+						ul(class="cart")
+							a(href="checkout.html")
+								h4
+									i(class="cart_icon")
+									p Cart:
+									span(class="simpleCart_total") (
+									span(id="simpleCart_quantity" class="simpleCart_quantity") items)
+									div(class="clearfix")
+							h5(class="empty")
+								a(href="javascript:voide(0)" class="simpleCart_empty") Empty Cart
+							div(class="clearfix")
+						ul(class="quick_access")
+							li(class="view_cart")
+								a(href="checkout.html") View Cart
+							li(class="check")
+								a(href="checkout.html") Checkout
+							div(class='clearfix')
+						div(class="search")
+							input(type="text" value="Search")
+							input(type="submit" value="")
+						div(class="welcome_box")
+							h3 Welcome to windsur
+							p It is a long established fact that a reader will be distracted by the readable content of a page
+				div(class="banner_right")
+					h1 Lorem Ipsum simply
+						br
+						| dummy text
+					p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+					a(href="#" class="banner_btn") Buy Now
+				div(class='clearfix')
+	div(class="main")
+		div(class="content_box")
+			div(class="container")
+				div(class="row")
+					div(class="col-md-3")
+						div(class="menu_box")
+							h3(class="menu_head") Menu
+							ul(class="nav")
+								li
+									a(href="http://localhost:7000/about-us") About
+								li
+									a(href="http://localhost:7000/about-us") Living Room
+								li
+									a(href="http://localhost:7000/about-us") Office Furniture
+								li
+									a(href="http://localhost:7000/about-us") Bean Bags
+								li
+									a(href="http://localhost:7000/about-us") Tables
+								li
+									a(href="http://localhost:7000/about-us") Sofas
+								li
+									a(href="http://localhost:7000/about-us") Wardrobes
+								li
+									a(href="http://localhost:7000/about-us") Beds
+								li
+									a(href="http://localhost:7000/about-us") ypo
+								li
+									a(href="http://localhost:7000/about-us") Chairs
+								li
+									a(href="http://localhost:7000/about-us") Kids Beds
+						div(class="side_banner")
+							div(class="banner_img")
+								img(src="images/pic9.jpg" class="img-responsive" alt="")
+							div(class="banner_holder")
+								h3 Now
+									br
+									|	is
+									br 
+									|	Open!
+						div(class="tags")
+							h4(class="tag_head") Tags Widget
+							ul(class="tags_links")
+								li
+									a(href="#") Office
+								li
+									a(href="#") Chairs
+								li
+									a(href="#") Wood
+								li
+									a(href="#") Metal
+								li
+									a(href="#") Sizes
+								li
+									a(href="#") Women
+								li
+									a(href="#") Wardrobes
+								li
+									a(href="#") Latest
+								li
+									a(href="#") Kitchen
+								li
+									a(href="#") Tables
+								li
+									a(href="#") Modern
+								li
+									a(href="#") Colors
+								li
+									a(href="#") Shelves
+								li
+									a(href="#") Stools
+								li
+									a(href="#") Pouffes
+								li
+									a(href="#") Women
+								li
+									a(href="#") Bedroom
+							a(href="#" class="link1") View all tags
+						div(class="tags")
+							h4(class="tag_head") Articles Experts
+							ul(class="article_links")
+								li
+									a(href="#") Eleifend option congue nihil
+								li
+									a(href="#") Investigationes demonst
+								li
+									a(href="#") Qui sequitur mutationem
+								li
+									a(href="#") videntur parum clar sollemnes
+								li
+									a(href="#") ullamcorper suscipit lobortis
+								li
+									a(href="#") commodo consequat. Duis autem
+								li
+									a(href="#") Investigationes demonst
+								li
+									a(href="#") ullamcorper suscipit lobortis
+								li
+									a(href="#") Qui sequitur mutationem
+								li
+									a(href="#") videntur parum clar sollemnes
+								li
+									a(href="#") ullamcorper suscipit lobortis
+							
+							a(href="#" class="link1") View all
+					div(class="col-md-9")
+						h3(class="m_1") New Products
+						div(class="content_grid")
+							each item in products
+								div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+									a(href="single.html")
+										div(class="inner_content clearfix")
+											div(class="product_image")
+												img(src='files/' + item.image class="img-responsive" alt="")
+												a(href="" class="button item_add item_1")
+												div(class="product_container")
+													div(class="cart-left")
+														p(class="title")=item.title
+													span(class="amount item_price")= '$' + item.price
+													div(class="clearfix")
+						div(class="content_grid")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic4.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $2300.00
+												div(class="clearfix")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic5.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $2300.00
+												div(class="clearfix")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic6.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $2300.00
+												div(class="clearfix")
+						h3(class="m_2") Top Products
+						div(class="content_grid")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic7.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $4500.00
+												div(class="clearfix")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic8.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $4500.00
+												div(class="clearfix")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic13.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $4500.00
+												div(class="clearfix")
+						h3(class="m_2") Sale Products
+						div(class="content_grid")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic10.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $99.00
+												div(class="clearfix")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic11.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $99.00
+												div(class="clearfix")
+							div(class="col_1_of_3 span_1_of_3 simpleCart_shelfItem") 
+								a(href="single.html")
+									div(class="inner_content clearfix")
+										div(class="product_image")
+											img(src="images/pic12.jpg" class="img-responsive" alt="")
+											a(href="" class="button item_add item_1")
+											div(class="product_container")
+												div(class="cart-left")
+													p(class="title") Lorem Ipsum 2015
+												span(class="amount item_price") $99.00
+												div(class="clearfix")
+		include common/footer
